@@ -10,16 +10,16 @@ YOUR_PASSWORD = st.secrets["app_password"]
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
 
-if not st.session_state["authenticated"]:
-    st.title("🔒 Data Protection Access Gate")
-    user_input = st.text_input("Enter your application password:", type="password")
-    if st.button("Unlock Dashboard"):
-        if user_input == YOUR_PASSWORD:
-            st.session_state["authenticated"] = True
-            st.rerun()
-        else:
-            st.error("❌ Invalid password. Access Denied.")
-    st.stop()
+//if not st.session_state["authenticated"]:
+//    st.title("🔒 Data Protection Access Gate")
+//    user_input = st.text_input("Enter your application password:", type="password")
+//    if st.button("Unlock Dashboard"):
+//        if user_input == YOUR_PASSWORD:
+st.session_state["authenticated"] = True
+//            st.rerun()
+//       else:
+//            st.error("❌ Invalid password. Access Denied.")
+//    st.stop()
 
 # --- APPLICATION DASHBOARD ---
 st.title("💼 Daily LinkedIn Job Change Auditor")
